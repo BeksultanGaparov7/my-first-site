@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block site_title %}<title>Blog</title>{% endblock %}
+{% block content %}
+    <h1>Блог</h1>
+    {% for story in stories %}
+        <div>
+            <img src="static/images/instagram" alt="photo">
+            <h5>{{ story.headline }}</h5>
+            <p>{{ story.story }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
